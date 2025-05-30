@@ -2,9 +2,8 @@
 郑州大学LaTeX Beamer模板——Zhengzhou University (ZZU) LaTeX Beamer Template (Version: 1.0, May 30, 2025)
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT) 
-[![GitHub develop](https://img.shields.io/badge/Github-V1.0-519dd9.svg)](https://github.com/CQUtug/CQUBeamer)
-[![GitHub release](https://img.shields.io/badge/CTAN-V1.0-blue.svg)](https://ctan.org/pkg/cqubeamer)
-[![GitHub commits](https://img.shields.io/badge/Commits-1-519dd9.svg)](https://github.com/CQUtug/CQUBeamer/issues)
+[![GitHub develop](https://img.shields.io/badge/Github-V1.0-519dd9.svg)](https://github.com/grhsmt/ZZUBeamer)
+[![GitHub commits](https://img.shields.io/badge/Commits-1-519dd9.svg)](https://github.com/grhsmt/ZZUBeamer/issues)
 ![](https://img.shields.io/badge/language-Tex-orange.svg)
 
 ## What is the ZZUBeamer Template?
