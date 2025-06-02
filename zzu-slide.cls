@@ -141,8 +141,9 @@
                     {\zihao{-5}\bf\songti 本\, 科\, 毕\, 业\, 答\, 辩}
                 \vskip 10pt
                 \begin{beamercolorbox}[wd=\paperwidth,center]{palette primary}
-                    \vskip 4pt
+                    \vskip 2pt
                     \zihao{2}\zzu@title
+                    \vskip 0.5pt
                     \zihao{5}\zzu@subtitle
                     \vskip 4pt
                 \end{beamercolorbox}
@@ -166,8 +167,9 @@
                     {\color{white}\zihao{-5}\bf\songti 本\, 科\, 毕\, 业\, 答\, 辩}
                 \vskip 10pt
                 \begin{beamercolorbox}[wd=\paperwidth,center]{palette secondary}
-                    \vskip 4pt
+                    \vskip 2pt
                     \zihao{2}\zzu@title
+                    \vskip 0.5pt
                     \zihao{5}\zzu@subtitle
                     \vskip 4pt
                 \end{beamercolorbox}
@@ -339,6 +341,33 @@
     \end{center}
 }
 \makeatother
+
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+\RequirePackage{fontspec}
+% 定义代码环境
+\lstnewenvironment{zzucode}[1][]{%
+    \lstset{
+        numbers=left, 
+        numberstyle= \tiny, 
+        keywordstyle= \color{ blue!70},%设置关键字颜色
+        commentstyle= \color{red!50!green!50!blue!50}, %设置注释颜色
+        frame=shadowbox, % 阴影效果
+        rulesepcolor= \color{ red!20!green!20!blue!20},
+        escapeinside='', % 英文分号中可写入中文
+        xleftmargin=2em, %距离左边界2em
+        aboveskip=1em,
+        framexleftmargin=2em,
+        basicstyle=\ttfamily,
+        columns=fullflexible,%可以自动换行
+        linewidth=1\linewidth, %设置代码块与行同宽
+        breaklines=true,%在单词边界处换行。
+        showstringspaces=false, %去掉空格时产生的下划的空格标志, 设置为true则出现
+        breakatwhitespace=ture,%可以在空格处换行
+        escapechar=',%设置转义字符为反引号
+        #1 % 允许用户传入额外的配置参数
+    }%
+}{}
 
 \mode<all>
 \endinput

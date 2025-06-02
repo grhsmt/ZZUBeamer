@@ -1,0 +1,117 @@
+\documentclass[compress, aspectratio=1610]{zzu-slide}
+
+\addbibresource{ref.bib}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=green,
+	urlcolor=red,
+	citecolor=blue,
+}
+
+\usepackage{background}
+\backgroundsetup{
+    scale=2, % 水印大小
+    color=red, % 水印颜色
+    opacity=0.1, % 水印透明度
+    angle=45, % 水印角度
+    position=current page.center,
+    % vshift=2cm,
+    % hshift=2cm,
+    contents={Non-commercial use only.} % 水印内容
+}
+\setbeamertemplate{background}{\BgMaterial}
+
+% 取消注释可自定义颜色
+% 深蓝色示例
+% \definecolor{xmublue}{RGB}{0,68,170}
+% \definecolor{xmulightblue}{RGB}{200,222,255}
+% 橙色示例
+% \definecolor{xmublue}{RGB}{249,138,0}
+% \definecolor{xmulightblue}{RGB}{255,231,200}
+% 粉色示例
+% \definecolor{xmublue}{RGB}{219,115,188}
+% \definecolor{xmulightblue}{RGB}{255,206,239}
+
+% 取消注释可自定义字体（例如使用 macOS 下更好看的字体）
+% \setsansfont{SF Pro}
+% \setCJKsansfont{PingFang SC}
+
+% 浅色主题 / 深色主题（注释即为浅色）
+% \dark
+
+% 底部控制放映的导航条（取消注释则不显示）
+\nav
+
+% 封面的毕设题目
+\title{标题}
+
+\subtitle{副标题}
+
+% 答辩人
+\author{你的名字}
+
+% 指导教师
+\teacher{老师名字\;职称}
+
+% 答辩时间
+\pubdate{\today}  %%%后期可以根据你的答辩时间进行更改
+
+\begin{document}
+	
+	% 封面
+	\maketitle
+	
+	% 目录页
+	\begin{frame}{目录}
+        \tableofcontents
+	\end{frame}
+	
+	% 第一部分 转场
+	\zzusection{第一章标题}{第一章副标题或者英文版标题}
+
+    \begin{frame}[fragile, allowframebreaks]{算法命令使用说明}
+        \begin{zzucode}[language=TeX]
+\begin{zzubreakablealgorithm}
+    \caption{算法名字} %算法的名字
+    \label{算法标签}
+    \begin{algorithmic}[1]
+        \Require 输入
+        \Ensure 输出
+        \State 算法语句
+        \For{i=1} For循环
+            \State x=i+1
+        \EndFor
+        \If{a} 条件语句
+            \State b
+        \Else
+            \State c
+        \EndIf
+        \State \Return x \Comment{返回语句}
+    \end{algorithmic}
+\end{zzubreakablealgorithm}
+        \end{zzucode}
+    \end{frame}
+
+    \begin{frame}{命令说明}
+        \begin{itemize}
+            \item $\backslash$maketitle 显示封面；
+            \item $\backslash$tableofcontents 显示目录；
+            \item $\backslash$zzusection$\{\}\{\}$ 显示章节页；
+            \item $\backslash$begin$\{$zzubreakablealgorithm$\}$ $\cdots$ $\backslash$end$\{$zzubreakablealgorithm$\}$ 显示跨页版本算法；
+            \item $\backslash$begin$\{$zzucode$\}$ $\cdots$ $\backslash$end$\{$zzucode$\}$ 显示代码，且记得加上fragile命令；
+            \item $\backslash$cite$\{\}$ 显示参考文献引用，例如\cite{barmpoutis2020review}；
+            \item $\backslash$thanksforlistening$\{\}$ 显示结束页。
+        \end{itemize}
+    \end{frame}
+	
+    \begin{frame}[allowframebreaks]{参考文献}
+        \printbibliography
+    \end{frame}
+
+	% 谢谢收听页面
+	\thanksforlistening{完结撒花！}
+	
+\end{document}
+
